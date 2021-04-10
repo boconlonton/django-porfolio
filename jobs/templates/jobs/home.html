@@ -1,13 +1,14 @@
 
 <!doctype html>
 <html lang="en">
+{% load staticfiles %}
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.82.0">
-    <title>Album example · Bootstrap v5.0</title>
+    <title>Portfolio</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
 
@@ -58,7 +59,7 @@
           <a class="nav-link active" aria-current="page" href="#">Twitter</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Resume</a>
+          <a class="nav-link" href="{% static 'resume.pdf' %}">Resume</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -90,8 +91,10 @@
         <p>
           <a href="mailto:boconlonton111@gmail.com" class="btn btn-primary my-2">Email me!</a>
         </p>
+        <img class="img-fluid" src = "{% static 'bocon.jpeg' %}">
       </div>
     </div>
+
   </section>
 
   <div class="album py-5 bg-light">
