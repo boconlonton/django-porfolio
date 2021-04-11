@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -79,11 +83,11 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'NAME': 'portfoliodb',
-        'USER': 'postgres',
-        'PASSWORD': '$Gavippro003',
-        'HOST': 'localhost',
-        'PORT': 5432
+        'NAME': os.getenv("DBNAME"),
+        'USER': os.getenv("DBUSER"),
+        'PASSWORD': os.getenv("DBPASSWORD"),
+        'HOST': os.getenv("DBHOST"),
+        'PORT': os.getenv("DBPORT")
     }
 }
 
